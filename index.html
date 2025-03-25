@@ -202,11 +202,15 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Send (comming soon)" class="contact__button button">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact__form">
+
+                        <input type="hidden" name="access_key" value="dec01b89-d570-4c84-a76e-76b7b5c18b92">
+
+                        <input type="text" placeholder="Name" class="contact__input" name="name" required>
+                        <input type="mail" placeholder="Email" class="contact__input" name="email" required>
+                        <textarea name="message" id="" cols="0" rows="10" class="contact__input" required></textarea>
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <button type="submit" class="contact__button button">Submit</button>
                     </form>
                 </div>
             </section>
