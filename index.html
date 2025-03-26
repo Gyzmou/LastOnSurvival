@@ -16,7 +16,7 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Last On Survival</a>
+                   <a href="#" class="nav__logo">Last On Survival</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -25,10 +25,10 @@
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Staff</a></li>
                         <li class="nav__item"><a href="#links" class="nav__link">Links</a></li>
-                        <li class="nav__item"><a href="#image" class="nav__link">Image</a></li>
+                        <li class="nav__item"><a href="#image" class="nav__link">Pictures</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
-                </div>
+                </div>  
 
                 <div class="nav__toggle" id="nav-toggle">
                     <i class='bx bx-menu'></i>
@@ -75,8 +75,8 @@
                     
                     <div>
                         <h2 class="about__subtitle">Last On Survival</h2>
-                        <p class="about__text">Survive in a wild and mysterious world. Explore diverse environments, uncover the hidden secrets of this place…
-                            Every decision counts in this intense survival adventure where only the boldest thrive. Create by GNS STUDIO</p>           
+                        <p class="about__text">Dive into a wild and mysterious world where survival is a constant struggle, explore diverse environments, uncover the hidden mysteries and secrets of this fascinating place... 
+                            In this intense survival adventure, every choice you make will have consequences, and only the boldest will thrive in the face of the challenges ahead. Created by GNS STUDIO.</p>           
                     </div>                                   
                 </div>
             </section>
@@ -84,63 +84,101 @@
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
                 <h2 class="section-title">Staff</h2>
-
+            
                 <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Effective</h2>
-                        <p class="skills__text">Our team consists of </p>
+                    <div class="skills_cadre"> 
+            
+                        <!-- DEV -->
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-   skills__icon'></i>
-                                <span class="skills__name">DEV</span>
+                                <i class='bx bxl- skills__icon'></i>
+                                <span class="skills__name">DEV TEAMS</span>
+                                <button class="dropdown__toggle" onclick="toggleDropdown('dev-list')">▼</button>
                             </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">2 poeples</span>
-                            </div>
+                            <ul class="dropdown__menu" id="dev-list">
+                                <li>
+                                    <img src="assets/img/Gyzmou discord.png" alt="Gyzmou" class="profile__img">
+                                    <span>Gyzmou</span>
+                                </li>
+                                <li>
+                                    <img src="assets/img/Versace.png" alt="V$ersace" class="profile__img">
+                                    <span>V$rsace</span>
+                                </li>
+                                <li>
+                                    <img src="assets/img/sgm discord pp.gif" alt="S.gml" class="profile__img">
+                                    <span>S.gml</span>
+                                </li>
+                            </ul>
                         </div>
+            
+                        <!-- COMMUNITY MANAGER -->
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-   skills__icon'></i>
-                                <span class="skills__name">COMMUNITY MANAGER</span>
+                                <i class='bx bxl- skills__icon'></i>
+                                <span class="skills__name">COMMUNITY MANAGER TEAMS</span>
+                                <button class="dropdown__toggle" onclick="toggleDropdown('community-manager-list')">▼</button>
                             </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">4 poeples</span>
-                            </div>
+                            <ul class="dropdown__menu" id="community-manager-list">
+                                <li>
+                                    <img src="assets/img/Versace.png" alt="V$ersace" class="profile__img">
+                                    <span>V$rsace</span>
+                                </li>
+                                <li>
+                                    <img src="assets/img/Gyzmou discord.png" alt="Gyzmou" class="profile__img">
+                                    <span>Gyzmou</span>
+                                </li>
+                                <li>
+                                    <img src="assets/img/colyth pp.png" alt="Colyth" class="profile__img">
+                                    <span>Colyth</span>
+                                </li>
+                                <li>
+                                    <img src="assets/img/sgm discord pp.gif" alt="S.gml" class="profile__img">
+                                    <span>S.gml</span>
+                                </li>
+                            </ul>
                         </div>
+            
+                        <!-- PROJECT MANAGER -->
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-   skills__icon' ></i>
-                                <span class="skills__name">PROJECT MANAGER</span>
+                                <i class='bx bxl- skills__icon'></i>
+                                <span class="skills__name">PROJECT MANAGERS TEAMS</span>
+                                <button class="dropdown__toggle" onclick="toggleDropdown('project-manager-list')">▼</button>
                             </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">1 poeple</span>
-                            </div>
+                            <ul class="dropdown__menu" id="project-manager-list">
+                                <li>
+                                    <img src="assets/img/colyth pp.png" alt="Colyth" class="profile__img">
+                                    <span>Colyth</span>
+                                </li>
+                                <li>
+                                    <img src="assets/img/Gyzmou discord.png" alt="Gyzmou" class="profile__img">
+                                    <span>Gyzmou</span>
+                                </li>
+                            </ul>
                         </div>
+            
+                        <!-- UX/UI -->
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-   skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
+                                <i class='bx bxl- skills__icon'></i>
+                                <span class="skills__name">UX/UI TEAMS</span>
+                                <button class="dropdown__toggle" onclick="toggleDropdown('ux-ui-list')">▼</button>
                             </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">2 poeple</span>
-                            </div>
+                            <ul class="dropdown__menu" id="ux-ui-list">
+                                <li>
+                                    <img src="assets/img/Versace.png" alt="V$ersace" class="profile__img">
+                                    <span>V$rsace</span>
+                                </li>
+                                <li>
+                                    <img src="assets/img/Gyzmou discord.png" alt="Gyzmou" class="profile__img">
+                                    <span>Gyzmou</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    
+            
                     <div>              
-                        <img src="assets/img/Frame 1.png" alt="" class="skills__img">
+                        <img src="assets/img/Frame 1.png" alt="" class="skills__img" width="70%" >
                     </div>
                 </div>
             </section>
@@ -151,29 +189,29 @@
 
                 <div class="work__container bd-grid">
                     <a href="https://discord.gg/3p6whxZqFx" class="work__img">
-                        <img src="assets/img/discord.jpg" alt="">
+                        <img class="link__img" src="assets/img/discord2.png" width="auto">
                     </a>
                     <a href="steam" class="work__img">
-                        <img src="assets/img/steam.jpg" alt="soon">
+                        <img class="link__img_steam" src="assets/img/Steam-logo-png.png" width="" alt="soon">
                     </a>
                     <a href="kickstarter" class="work__img">
-                        <img src="assets/img/kickstarter.jpg" alt="soon..">
+                        <img class="link__img" src="assets/img/Logo-Kickstarter.png" width="90%" alt="soon..">
                     </a>
                     <a href="https://www.instagram.com/_studio_gns_/" class="work__img">
-                        <img src="assets/img/insta.jpg" alt="">
+                        <img class="link__img" src="assets/img/insta.jpg" width="200px" alt="">
                     </a>
                     <a href="https://x.com/gns_studio_" class="work__img">
-                        <img src="assets/img/twitter.png" alt="">
+                        <img class="link__img_x" src="assets/img/twitter.png" width="200px" alt="">
                     </a>
                     <a href="https://www.tiktok.com/@studio_gns?lang=fr" class="work__img">
-                        <img src="assets/img/tiktok.jpg" alt="">
+                        <img class="link__img" src="assets/img/tiktok.jpg" width="200px" alt="">
                     </a>
                 </div>
             </section>
 
             <!--===== Image =====-->
             <section class="work section" id="image">
-                <h2 class="section-title">Images</h2>
+                <h2 class="section-title">Pictures</h2>
 
                 <div class="work__container bd-grid">
                     <a href="" class="work__img">
@@ -224,7 +262,7 @@
                 <a href="https://www.instagram.com/_studio_gns_/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
                 <a href="https://x.com/gns_studio_" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-            <p class="footer__copy">&#169;GNS Studio. All rigths reserved</p>
+            <p class="footer__copy">&#169; GNS Studio. All rigths reserved</p>
         </footer>
 
 

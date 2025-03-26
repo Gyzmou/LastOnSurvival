@@ -247,19 +247,26 @@ img {
 }
 .about__img img {
   width: 200px;
-  border-radius: 0.5rem;
+  margin-left: 0px;
 }
 
-/* ===== SKILLS =====*/
+/* ===== STAFF =====*/
+
+.skills__img {
+  margin-left: 50px;
+}
 .skills__container {
   row-gap: 2rem;
   text-align: center;
+
 }
 .skills__subtitle {
   margin-bottom: var(--mb-2);
+
 }
 .skills__text {
   margin-bottom: var(--mb-4);
+
 }
 .skills__data {
   display: flex;
@@ -271,15 +278,18 @@ img {
   margin-bottom: var(--mb-4);
   border-radius: 0.5rem;
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+
 }
 .skills__icon {
   font-size: 2rem;
   margin-right: var(--mb-2);
   color: var(--first-color);
+
 }
 .skills__names {
   display: flex;
   align-items: center;
+
 }
 .skills__bar {
   position: absolute;
@@ -289,6 +299,7 @@ img {
   height: 0.25rem;
   border-radius: 0.5rem;
   z-index: var(--z-back);
+
 }
 .skills__html {
   width: 50%;
@@ -302,16 +313,14 @@ img {
 .skills__ux {
   width: 50%;
 }
-.skills__img {
-  border-radius: 0.5rem;
-}
+
 
 /* ===== WORK =====*/
 .work__container {
   row-gap: 3rem;
 }
 .work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -319,9 +328,27 @@ img {
   transition: 1s;
 }
 .work__img img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
+.link__img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: 90px;
+}
+.link__img_steam {
+  width: 150px;
+  object-fit: cover;
+  margin-left: 90px;
+  margin-top: 5px;
+}
+.link__img_x {
+  width: 150px;
+  object-fit: cover;
+  margin-left: 90px;
+  margin-top: 10px;
+}
 /* ===== CONTACT =====*/
 .contact__input {
   width: 100%;
@@ -374,6 +401,9 @@ img {
   .home__img {
     width: 200px;
   }
+  .skills__img {
+    margin-top: 10px;
+  }
 }
 @media screen and (min-width: 576px) {
   .home {
@@ -407,6 +437,9 @@ img {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     padding-top: 2rem;
+  }
+  .skills__img {
+    margin-top: 10px;
   }
   .contact__form {
     width: 360px;
@@ -459,18 +492,27 @@ img {
     padding-top: 2rem;
   }
   .about__img img {
-    width: 300px;
+    width: 50%;
+    
   }
   .skills__container {
+    
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     align-items: center;
     text-align: initial;
   }
+
+
   .work__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
   }
+
+  .skills__img {
+    margin-top: 10px;
+  }
+
 }
 @media screen and (min-width: 992px) {
   .bd-grid {
@@ -483,4 +525,77 @@ img {
   .home__img {
     width: 450px;
   }
+  .skills__img {
+    margin-top: 10px;
+  }
 }
+
+
+/* Style du menu déroulant */
+.dropdown__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  position: relative;
+  max-height: 0; /* Hauteur initiale à 0 */
+  overflow: hidden; /* Cache le contenu */
+  transition: max-height 0.5s ease, opacity 0.5s ease; /* Transition fluide */
+  opacity: 0; /* Initialement invisible */
+}
+
+.dropdown__menu.open {
+  max-height: 500px; /* Hauteur maximale (ajustez selon le contenu) */
+  opacity: 1; /* Rendre visible */
+}
+
+.dropdown__menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown__menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown__menu li:hover {
+  background-color: #f1f1f1;
+}
+
+.profile__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.dropdown__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: transform 0.5s ease; /* Animation de rotation */
+}
+
+.dropdown__toggle.open {
+  transform: rotate(180deg); /* Rotation de la flèche */
+}
+
+/* Animation pour le menu déroulant */
+@keyframes dropdownFade {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
