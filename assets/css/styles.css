@@ -7,9 +7,9 @@
   /*===== Colores =====*/
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
-  --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 89%, 60%);
-  --second-color: hsl(var(--hue-color), 56%, 12%);
+  --hue-color: 360;
+  --first-color: hsl(128, 21%, 56%);
+  --second-color: hsl(39, 100%, 12%);
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
@@ -122,6 +122,19 @@ img {
   align-items: center;
   font-weight: var(--font-semi);
 }
+/* Conteneur pour le logo et le texte */
+.nav__logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacement entre le logo et le texte */
+}
+
+/* Style pour l'image du logo */
+.nav__logo-img {
+  width: 40px; /* Ajustez la taille du logo */
+  height: 40px;
+  object-fit: contain; /* Assure que l'image garde ses proportions */
+}
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -212,12 +225,13 @@ img {
   right: 0;
   bottom: 0;
   width: 260px;
+  border-radius: 50px;
 }
 .home__blob {
   fill: var(--first-color);
 }
 .home__blob-img {
-  width: 360px;
+  width: 500px;
 }
 
 /*BUTTONS*/
@@ -342,12 +356,14 @@ img {
   object-fit: cover;
   margin-left: 90px;
   margin-top: 5px;
+  align-items: center
 }
 .link__img_x {
   width: 150px;
   object-fit: cover;
-  margin-left: 90px;
+  margin-left: 95px;
   margin-top: 10px;
+  align-items: center;
 }
 /* ===== CONTACT =====*/
 .contact__input {
@@ -465,7 +481,7 @@ img {
     top: 3rem;
   }
   .nav {
-    height: calc(var(--header-height) + 1.5rem);
+    height: calc(var(--header-height) + 1rem);
   }
   .nav__list {
     display: flex;
