@@ -1,278 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-        <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
-        <link rel="stylesheet" href="assets/css/styles.css">
-
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
-        <title>Last On Survival</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div class="nav__logo-container">
-                    <!-- Logo ajouté -->
-                    <img src="assets/img/logo.png" alt="Logo" class="nav__logo-img">
-                    <a href="#" class="nav__logo">Last On Survival</a>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last On Survivals</title>
+    <link rel="icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-circle">
+                        <span>LS</span>
+                    </div>
+                    <span class="logo-text">Last On Survivals</span>
                 </div>
-        
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Staff</a></li>
-                        <li class="nav__item"><a href="#links" class="nav__link">Links</a></li>
-                        <li class="nav__item"><a href="#image" class="nav__link">Pictures</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>  
-        
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
+                <nav class="nav">
+                    <a href="#" class="nav-link">Accueil</a>
+                    <a href="#features" class="nav-link">Fonctionnalités</a>
+                    <a href="#worlds" class="nav-link">Mondes</a>
+                    <a href="#" class="nav-link">Communauté</a>
+                </nav>
+                <button class="btn btn-outline">Jouer Maintenant</button>
+            </div>
         </header>
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title"><span class="home__title-color">Last On Survival</span><br> Video Game</h1>
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-gradient"></div>
+            
+            <div class="container hero-content">
+                <div class="hero-text fade-in">
+                    <h1 class="hero-title">LAST ON <span>SURVIVALS</span></h1>
+                    <p class="hero-subtitle">
+                        Survivre. S'adapter. Surmonter. Le monde est tombé, mais pas vous.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Télécharger</button>
+                        <button class="btn btn-outline-secondary">Voir la Bande-annonce</button>
+                    </div>
+                </div>
+            </div>
 
-                    <a href="#" class="button">Pre-order</a>
+            <div class="scroll-indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">FONCTIONNALITÉS DU JEU</h2>
+                    <p class="section-subtitle">
+                        Découvrez le défi de survie ultime avec nos mécaniques de jeu innovantes et notre monde immersif.
+                    </p>
                 </div>
 
-                <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-' ></i></a> 
-                    <a href="" class="home__social-icon"><i class='bx bxl-' ></i></a>
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Vaste Monde Ouvert</h3>
+                        <p class="feature-desc">Explorez un immense paysage rempli de dangers et de trésors.</p>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Exploration</h3>
+                        <p class="feature-desc">Explorer ce vaste monde pour decouvrire d'inombrable paysage et endroit mysterieux.</p>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Histoir</h3>
+                        <p class="feature-desc">Une histoir a couper le souffle.</p>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Météo Dynamique</h3>
+                        <p class="feature-desc">Adaptez-vous aux conditions météorologiques changeantes qui affectent l'histoir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="worlds" class="worlds">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">EXPLOREZ LE MONDE</h2>
+                    <p class="section-subtitle">
+                        Découvrez des biomes uniques, chacun avec ses propres défis, ressources et autre.
+                    </p>
                 </div>
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="-20" y=""  href="assets/img/LOS logo first try.png"/>
-                        </g>
-                    </svg>
+                <div class="worlds-grid">
+                    <div class="world-card fade-in">
+                        <div class="world-image">
+                            <img src="https://placehold.co/600x400/333/666?text=Wasteland" alt="Wasteland">
+                        </div>
+                        <div class="world-content">
+                            <h3 class="world-title">Terres Désolées</h3>
+                            <p class="world-desc">Un île rempli de ruines et d'endroit mysterieux.</p>
+                            <button class="btn btn-sm btn-outline-primary">Découvrir</button>
+                        </div>
+                    </div>
+
+                    <div class="world-card fade-in">
+                        <div class="world-image">
+                            <img src="https://placehold.co/600x400/333/666?text=Dead+Forest" alt="Dead Forest">
+                        </div>
+                        <div class="world-content">
+                            <h3 class="world-title">Forêt</h3>
+                            <p class="world-desc">Des bois autrefois luxuriants maintenant rempli radiations.</p>
+                            <button class="btn btn-sm btn-outline-primary">Découvrir</button>
+                        </div>
+                    </div>
+
+                    <div class="world-card fade-in">
+                        <div class="world-image">
+                            <img src="https://placehold.co/600x400/333/666?text=Abandoned+City" alt="Abandoned City">
+                        </div>
+                        <div class="world-content">
+                            <h3 class="world-title">Village Abandonnée</h3>
+                            <p class="world-desc">Des ruines urbaines regorgeant de ressources.</p>
+                            <button class="btn btn-sm btn-outline-primary">Découvrir</button>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+        <section class="screenshots">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">CAPTURES D'ÉCRAN</h2>
+                    <p class="section-subtitle">
+                        Jetez un coup d'œil au monde immersif de Last On Survivals.
+                    </p>
+                </div>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/info.png" alt="">
+                <div class="screenshots-grid">
+                    <div class="screenshot fade-in">
+                        <img src="https://placehold.co/600x400/333/666?text=Screenshot+1" alt="Screenshot 1">
+                    </div>
+                    <div class="screenshot fade-in">
+                        <img src="https://placehold.co/600x400/333/666?text=Screenshot+2" alt="Screenshot 2">
+                    </div>
+                    <div class="screenshot fade-in">
+                        <img src="https://placehold.co/600x400/333/666?text=Screenshot+3" alt="Screenshot 3">
+                    </div>
+                    <div class="screenshot fade-in">
+                        <img src="https://placehold.co/600x400/333/666?text=Screenshot+4" alt="Screenshot 4">
+                    </div>
+                    <div class="screenshot fade-in">
+                        <img src="https://placehold.co/600x400/333/666?text=Screenshot+5" alt="Screenshot 5">
+                    </div>
+                    <div class="screenshot fade-in">
+                        <img src="https://placehold.co/600x400/333/666?text=Screenshot+6" alt="Screenshot 6">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta-bg"></div>
+            <div class="container">
+                <div class="cta-content fade-in">
+                    <h2 class="cta-title">REJOIGNEZ LE COMBAT POUR LA SURVIE</h2>
+                    <p class="cta-subtitle">
+                        Téléchargez maintenant et testez vos compétences de survie dans un monde vaste le plus difficile jamais créé.
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary">Télécharger Maintenant</button>
+                        <button class="btn btn-outline-secondary">Rejoindre la Communauté</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <div class="logo-circle logo-circle-sm">
+                                <span>LS</span>
+                            </div>
+                            <span class="logo-text">Last On Survivals</span>
+                        </div>
+                        <p class="footer-desc">
+                            L'expérience de survie ultime dans un monde vaste et splendide.
+                        </p>
                     </div>
                     
-                    <div>
-                        <h2 class="about__subtitle">Last On Survival</h2>
-                        <p class="about__text">Dive into a wild and mysterious world where survival is a constant struggle, explore diverse environments, uncover the hidden mysteries and secrets of this fascinating place... 
-                            In this intense survival adventure, every choice you make will have consequences, and only the boldest will thrive in the face of the challenges ahead. Created by GNS_STUDIO.</p>           
-                    </div>                                   
-                </div>
-            </section>
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Staff</h2>
-            
-                <div class="skills__container bd-grid">          
-                    <div class="skills_cadre"> 
-            
-                        <!-- DEV -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl- skills__icon'></i>
-                                <span class="skills__name">DEV TEAMS</span>
-                                <button class="dropdown__toggle" onclick="toggleDropdown('dev-list')">▼</button>
-                            </div>
-                            <ul class="dropdown__menu" id="dev-list">
-                                <li>
-                                    <img src="assets/img/Gyzmou discord.png" alt="Gyzmou" class="profile__img">
-                                    <span>Gyzmou</span>
-                                </li>
-                                <li>
-                                    <img src="assets/img/Versace.png" alt="V$ersace" class="profile__img">
-                                    <span>V$rsace</span>
-                                </li>
-                                <li>
-                                    <img src="assets/img/sgm discord pp.gif" alt="S.gml" class="profile__img">
-                                    <span>S.gml</span>
-                                </li>
-                            </ul>
-                        </div>
-            
-                        <!-- COMMUNITY MANAGER -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl- skills__icon'></i>
-                                <span class="skills__name">COMMUNITY MANAGER TEAMS</span>
-                                <button class="dropdown__toggle" onclick="toggleDropdown('community-manager-list')">▼</button>
-                            </div>
-                            <ul class="dropdown__menu" id="community-manager-list">
-                                <li>
-                                    <img src="assets/img/Versace.png" alt="V$ersace" class="profile__img">
-                                    <span>V$rsace</span>
-                                </li>
-                                <li>
-                                    <img src="assets/img/Gyzmou discord.png" alt="Gyzmou" class="profile__img">
-                                    <span>Gyzmou</span>
-                                </li>
-                                <li>
-                                    <img src="assets/img/colyth pp.png" alt="Colyth" class="profile__img">
-                                    <span>Colyth</span>
-                                </li>
-                                <li>
-                                    <img src="assets/img/sgm discord pp.gif" alt="S.gml" class="profile__img">
-                                    <span>S.gml</span>
-                                </li>
-                            </ul>
-                        </div>
-            
-                        <!-- PROJECT MANAGER -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl- skills__icon'></i>
-                                <span class="skills__name">PROJECT MANAGERS TEAMS</span>
-                                <button class="dropdown__toggle" onclick="toggleDropdown('project-manager-list')">▼</button>
-                            </div>
-                            <ul class="dropdown__menu" id="project-manager-list">
-                                <li>
-                                    <img src="assets/img/colyth pp.png" alt="Colyth" class="profile__img">
-                                    <span>Colyth</span>
-                                </li>
-                                <li>
-                                    <img src="assets/img/Gyzmou discord.png" alt="Gyzmou" class="profile__img">
-                                    <span>Gyzmou</span>
-                                </li>
-                            </ul>
-                        </div>
-            
-                        <!-- UX/UI -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl- skills__icon'></i>
-                                <span class="skills__name">UX/UI TEAMS</span>
-                                <button class="dropdown__toggle" onclick="toggleDropdown('ux-ui-list')">▼</button>
-                            </div>
-                            <ul class="dropdown__menu" id="ux-ui-list">
-                                <li>
-                                    <img src="assets/img/Versace.png" alt="V$ersace" class="profile__img">
-                                    <span>V$rsace</span>
-                                </li>
-                                <li>
-                                    <img src="assets/img/Gyzmou discord.png" alt="Gyzmou" class="profile__img">
-                                    <span>Gyzmou</span>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="footer-links">
+                        <h4 class="footer-title">Liens</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#features">Fonctionnalités</a></li>
+                            <li><a href="#worlds">Mondes</a></li>
+                            <li><a href="#">Personnages</a></li>
+                        </ul>
                     </div>
-            
-                    <div>              
-                        <img src="assets/img/Frame 1.png" alt="" class="skills__img" width="70%" >
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-title">Communauté</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">Discord</a></li>
+                            <li><a href="#">Forums</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-title">Support</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Signaler un Bug</a></li>
+                            <li><a href="#">Configuration Requise</a></li>
+                        </ul>
                     </div>
                 </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="links">
-                <h2 class="section-title">LINKS</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="https://discord.gg/3p6whxZqFx" class="work__img" target="_blank">
-                        <img class="link__img" src="assets/img/discord2.png" width="auto">
-                    </a>
-                    <a href="steam" class="work__img">
-                        <img class="link__img_steam" src="assets/img/Steam-logo-png.png" width="" alt="soon" target="_blank">
-                    </a>
-                    <a href="kickstarter" class="work__img">
-                        <img class="link__img" src="assets/img/Logo-Kickstarter.png" width="90%" alt="soon.." target="_blank">
-                    </a>
-                    <a href="https://www.instagram.com/_studio_gns_/" class="work__img">
-                        <img class="link__img" src="assets/img/insta.jpg" width="200px" alt="" target="_blank">
-                    </a>
-                    <a href="https://x.com/gns_studio_" class="work__img">
-                        <img class="link__img_x" src="assets/img/twitter.png" width="200px" alt="" target="_blank">
-                    </a>
-                    <a href="https://www.tiktok.com/@studio_gns?lang=fr" class="work__img">
-                        <img class="link__img" src="assets/img/tiktok.jpg" width="200px" alt="" target="_blank">
-                    </a>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        © 2025 Last On Survivals. Tous droits réservés.
+                    </p>
+                    <div class="footer-legal">
+                        <a href="#">Politique de Confidentialité</a>
+                        <a href="#">Conditions d'Utilisation</a>
+                    </div>
                 </div>
-            </section>
-
-            <!--===== Image =====-->
-            <section class="work section" id="image">
-                <h2 class="section-title">Pictures</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/Abandoned_bus_stop.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/image.png" width="1110px" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/GasStations.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/soon.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/soon.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/soon.jpg" alt="">
-                    </a>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="contact__form">
-
-                        <input type="hidden" name="access_key" value="dec01b89-d570-4c84-a76e-76b7b5c18b92">
-
-                        <input type="text" placeholder="Name" class="contact__input" name="name" required>
-                        <input type="mail" placeholder="Email" class="contact__input" name="email" required>
-                        <textarea name="message" placeholder="Message" id="" cols="0" rows="10" class="contact__input" required></textarea>
-                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
-                        <button type="submit" class="contact__button button">Submit</button>
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Last On Survival</p>
-            <div class="footer__social">
-                <a href="https://discord.gg/3p6whxZqFx" class="footer__icon"><i class='bx bxl-discord' ></i></a>
-                <a href="https://www.instagram.com/_studio_gns_/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="https://x.com/gns_studio_" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-            <p class="footer__copy">&#169; GNS Studio. All rigths reserved</p>
         </footer>
+    </div>
 
-
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                for (let i = 0; i < fadeElements.length; i++) {
+                    const elem = fadeElements[i];
+                    const distInView = elem.getBoundingClientRect().top - window.innerHeight + 100;
+                    
+                    if (distInView < 0) {
+                        elem.classList.add('visible');
+                    }
+                }
+            };
+            
+            fadeInOnScroll();
+            
+            window.addEventListener('scroll', fadeInOnScroll);
+        });
+    </script>
+</body>
 </html>
