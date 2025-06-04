@@ -692,3 +692,110 @@ a {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+/* Section Équipe */
+.team {
+    padding: 100px 0;
+    background-color: #36393f; /* Couleur de fond Discord */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.team-card {
+    background: #2f3136;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    border: 1px solid #202225;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    height: 210px;
+    margin: 15px 0;
+}
+
+.team-card:hover {
+    transform: translateY(-2px);
+    background: #36393f;
+    border-color: #40444b;
+}
+
+.team-image {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    border-right: 1px solid #202225;
+    flex-shrink: 0;
+    padding: 25px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    border: 3px solid #202225;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+    border-color: #40444b;
+}
+
+.team-content {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding-top: 25px;
+}
+
+.team-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.team-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.team-role {
+    font-size: 1rem;
+    color: #b9bbbe;
+    background: #202225;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.team-card:hover .team-role {
+    background: #40444b;
+    color: #ffffff;
+}
+
+/* Mise à jour des couleurs de texte pour la section */
+.team .section-title {
+    color: #ffffff;
+}
+
+.team .section-subtitle {
+    color: #b9bbbe;
+}
