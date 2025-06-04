@@ -12,6 +12,8 @@
     --background-light: #18181b;
     --border: #27272a;
     --radius: 0.5rem;
+    --card-glow: 0 0 20px rgba(16, 185, 129, 0.2);
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -297,26 +299,87 @@ a {
 }
 
 .feature-card {
-    background-color: var(--secondary);
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius);
-    padding: 1.5rem;
-    border: 1px solid var(--border);
-    transition: border-color 0.3s ease;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+    transform: rotate(45deg);
+    transition: all 0.8s ease;
+    opacity: 0;
 }
 
 .feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--card-glow);
     border-color: var(--primary-light);
 }
 
+.feature-card:hover::before {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
 .feature-icon {
-    margin-bottom: 1rem;
-    color: var(--primary-light);
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.feature-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary-light);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.feature-card:hover .feature-icon {
+    transform: rotateY(360deg);
+    background: var(--primary);
 }
 
 .feature-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.feature-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-light);
+    transition: width 0.3s ease;
+}
+
+.feature-card:hover .feature-title::after {
+    width: 100%;
 }
 
 .feature-desc {
@@ -339,6 +402,29 @@ a {
     border-radius: var(--radius);
     overflow: hidden;
     height: 300px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.world-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(16, 185, 129, 0.2), transparent);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.world-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--card-glow);
+}
+
+.world-card:hover::before {
+    opacity: 1;
 }
 
 .world-image {
@@ -354,22 +440,11 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .world-card:hover .world-image img {
-    transform: scale(1.1);
-}
-
-.world-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
-    z-index: 1;
+    transform: scale(1.1) rotate(2deg);
 }
 
 .world-content {
@@ -377,8 +452,15 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 1.5rem;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
+    transform: translateY(20px);
+    transition: all 0.5s ease;
     z-index: 2;
+}
+
+.world-card:hover .world-content {
+    transform: translateY(0);
 }
 
 .world-title {
@@ -404,18 +486,42 @@ a {
 }
 
 .screenshot {
+    position: relative;
     border-radius: var(--radius);
     overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.screenshot::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(16, 185, 129, 0.2), transparent);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.screenshot:hover {
+    transform: scale(1.05);
+    box-shadow: var(--card-glow);
+}
+
+.screenshot:hover::before {
+    opacity: 1;
 }
 
 .screenshot img {
     width: 100%;
     height: auto;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .screenshot:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1) rotate(1deg);
 }
 
 .cta {
@@ -707,49 +813,81 @@ a {
 }
 
 .team-card {
-    background: #2f3136;
+    background: linear-gradient(135deg, #2f3136 0%, #202225 100%);
     border-radius: 12px;
     overflow: hidden;
-    transition: all 0.2s ease;
-    border: 1px solid #202225;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--card-shadow);
     display: flex;
     height: 210px;
     margin: 15px 0;
+    position: relative;
+}
+
+.team-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(16, 185, 129, 0.1), transparent);
+    opacity: 0;
+    transition: all 0.5s ease;
 }
 
 .team-card:hover {
-    transform: translateY(-2px);
-    background: #36393f;
-    border-color: #40444b;
+    transform: translateY(-10px);
+    box-shadow: var(--card-glow);
+    border-color: var(--primary-light);
+}
+
+.team-card:hover::before {
+    opacity: 1;
 }
 
 .team-image {
     width: 160px;
     height: 160px;
     overflow: hidden;
-    border-right: 1px solid #202225;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     flex-shrink: 0;
-    padding: 25px 15px;
+    padding: 15px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.team-image::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary-light);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.team-card:hover .team-image::after {
+    opacity: 1;
 }
 
 .team-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: all 0.5s ease;
     border-radius: 50%;
-    border: 3px solid #202225;
-    max-width: 200px;
-    max-height: 200px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .team-card:hover .team-image img {
-    transform: scale(1.05);
-    border-color: #40444b;
+    transform: scale(1.1);
+    border-color: var(--primary-light);
 }
 
 .team-content {
@@ -760,6 +898,8 @@ a {
     justify-content: flex-start;
     flex-grow: 1;
     padding-top: 25px;
+    position: relative;
+    z-index: 1;
 }
 
 .team-name {
@@ -772,23 +912,26 @@ a {
 .team-roles {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
     margin-bottom: 15px;
 }
 
 .team-role {
-    font-size: 1rem;
-    color: #b9bbbe;
-    background: #202225;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
     padding: 6px 12px;
-    border-radius: 6px;
+    border-radius: 20px;
     display: inline-block;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 4px;
 }
 
 .team-card:hover .team-role {
-    background: #40444b;
-    color: #ffffff;
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    border-color: var(--primary-light);
 }
 
 /* Mise à jour des couleurs de texte pour la section */
@@ -798,4 +941,39 @@ a {
 
 .team .section-subtitle {
     color: #b9bbbe;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+    border: 2px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
 }
