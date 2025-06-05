@@ -858,6 +858,9 @@ a {
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
 }
 
 .team-image::after {
@@ -872,10 +875,6 @@ a {
     transition: all 0.5s ease;
 }
 
-.team-card:hover .team-image::after {
-    opacity: 1;
-}
-
 .team-image img {
     width: 100%;
     height: 100%;
@@ -883,6 +882,10 @@ a {
     transition: all 0.5s ease;
     border-radius: 50%;
     border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.team-card:hover .team-image::after {
+    opacity: 1;
 }
 
 .team-card:hover .team-image img {
@@ -976,4 +979,219 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-light);
+}
+
+/* Styles pour la page FAQ */
+.faq-section {
+    padding: 100px 0;
+    background-color: var(--bg-dark);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.faq-category {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-category:hover {
+    transform: translateY(-5px);
+}
+
+.faq-category-title {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.faq-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.faq-question h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.faq-answer p {
+    margin: 0;
+    padding: 1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Animation pour les éléments fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styles pour la page de signalement de bug */
+.bug-report-section {
+    padding: 100px 0;
+    background-color: var(--bg-dark);
+}
+
+.bug-report-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.bug-report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-light);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.player-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.file-upload {
+    position: relative;
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.file-upload-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload-label:hover {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-color);
+}
+
+.upload-icon {
+    font-size: 1.2rem;
+}
+
+.upload-text {
+    color: var(--text-light);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.form-actions button {
+    flex: 1;
+}
+
+/* Styles responsifs */
+@media (max-width: 768px) {
+    .player-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
 }

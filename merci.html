@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci pour votre signalement !</title>
+    <link rel="icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: var(--bg-dark, #181a1b);
+            color: var(--text-light, #fff);
+            font-family: 'Rajdhani', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .merci-container {
+            background: rgba(255,255,255,0.04);
+            border-radius: 16px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+            padding: 3rem 2rem;
+            text-align: center;
+            max-width: 400px;
+        }
+        .merci-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #3ecf4a;
+        }
+        .merci-text {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+        }
+        .btn-retour {
+            background: none;
+            border: 2px solid #3ecf4a;
+            color: #3ecf4a;
+            padding: 0.7rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .btn-retour:hover {
+            background: #3ecf4a;
+            color: #181a1b;
+        }
+    </style>
+</head>
+<body>
+    <div class="merci-container">
+        <div class="merci-title">Merci !</div>
+        <div class="merci-text">
+            Votre rapport de bug a bien été envoyé.<br>
+            Nous apprécions votre aide pour améliorer Last On Survivals.<br>
+            Notre équipe va examiner votre signalement dès que possible.
+        </div>
+        <button class="btn-retour" onclick="window.history.back()">⟵ Retour</button>
+    </div>
+</body>
+</html> 

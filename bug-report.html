@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signaler un Bug - Last On Survivals</title>
+    <link rel="icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("VOTRE_PUBLIC_KEY"); // Remplacez par votre clé publique EmailJS
+        })();
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-circle">
+                        <span>LS</span>
+                    </div>
+                    <span class="logo-text">Last On Survivals</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="index.html#features" class="nav-link">Fonctionnalités</a>
+                    <a href="index.html#worlds" class="nav-link">Mondes</a>
+                    <a href="#" class="nav-link">Communauté</a>
+                </nav>
+                <button class="btn btn-outline">Jouer Maintenant</button>
+            </div>
+        </header>
+
+        <section class="bug-report-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">SIGNALER UN BUG</h2>
+                    <p class="section-subtitle">
+                        Aidez-nous à améliorer Last On Survivals en signalant les problèmes que vous rencontrez
+                    </p>
+                </div>
+
+                <div class="bug-report-container fade-in">
+                    <form id="bugReportForm" class="bug-report-form" action="https://formsubmit.co/gnsstudiov2@gmail.com" method="POST">
+                        <!-- Protection anti-spam -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Redirection après envoi -->
+                        <input type="hidden" name="_next" value="https://lastonsurvivals.fr/merci.html">
+                        <!-- Format de l'email -->
+                        <input type="hidden" name="_template" value="table">
+                        <!-- Sujet de l'email -->
+                        <input type="hidden" name="_subject" value="Nouveau rapport de bug - Last On Survivals">
+
+                        <div class="form-group">
+                            <label for="bugType">Type de Bug</label>
+                            <select id="bugType" name="Type de Bug" required>
+                                <option value="">Sélectionnez un type</option>
+                                <option value="gameplay">Gameplay</option>
+                                <option value="graphics">Graphismes</option>
+                                <option value="audio">Audio</option>
+                                <option value="ui">Interface Utilisateur</option>
+                                <option value="performance">Performance</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bugTitle">Titre du Bug</label>
+                            <input type="text" id="bugTitle" name="Titre du Bug" required 
+                                   placeholder="Ex: Le personnage reste bloqué après avoir sauté">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bugDescription">Description Détaillée</label>
+                            <textarea id="bugDescription" name="Description Détaillée" rows="5" required
+                                    placeholder="Décrivez le bug en détail. Incluez les étapes pour le reproduire si possible."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bugLocation">Localisation du Bug</label>
+                            <input type="text" id="bugLocation" name="Localisation du Bug" required
+                                   placeholder="Ex: Zone de spawn, Forêt, etc.">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bugSeverity">Sévérité</label>
+                            <select id="bugSeverity" name="Sévérité" required>
+                                <option value="">Sélectionnez la sévérité</option>
+                                <option value="low">Faible - N'affecte pas le gameplay</option>
+                                <option value="medium">Moyenne - Affecte légèrement le gameplay</option>
+                                <option value="high">Élevée - Empêche la progression</option>
+                                <option value="critical">Critique - Rendu du jeu impossible</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bugScreenshot">Capture d'écran (optionnel)</label>
+                            <div class="file-upload">
+                                <input type="file" id="bugScreenshot" name="Capture d'écran" accept="image/*">
+                                <label for="bugScreenshot" class="file-upload-label">
+                                    <span class="upload-icon">📷</span>
+                                    <span class="upload-text">Choisir une image</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="playerInfo">Informations du Joueur</label>
+                            <div class="player-info-grid">
+                                <input type="text" id="playerName" name="Nom d'utilisateur" placeholder="Nom d'utilisateur" required>
+                                <input type="email" id="playerEmail" name="Email" placeholder="Email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="systemInfo">Informations Système</label>
+                            <textarea id="systemInfo" name="Informations Système" rows="3" required
+                                    placeholder="Décrivez votre configuration (OS, CPU, GPU, RAM)"></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Envoyer le Rapport</button>
+                            <button type="reset" class="btn btn-outline-secondary">Réinitialiser</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <div class="logo-circle logo-circle-sm">
+                                <span>LS</span>
+                            </div>
+                            <span class="logo-text">Last On Survivals</span>
+                        </div>
+                        <p class="footer-desc">
+                            L'expérience de survie ultime dans un monde vaste et splendide.
+                        </p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-title">Liens</h4>
+                        <ul class="footer-menu">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="index.html#features">Fonctionnalités</a></li>
+                            <li><a href="index.html#worlds">Mondes</a></li>
+                            <li><a href="#">Personnages</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-title">Communauté</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">Discord</a></li>
+                            <li><a href="#">Forums</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-title">Support</h4>
+                        <ul class="footer-menu">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="bug-report.html">Signaler un Bug</a></li>
+                            <li><a href="#">Configuration Requise</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        © 2025 Last On Survivals. Tous droits réservés.
+                    </p>
+                    <div class="footer-legal">
+                        <a href="#">Politique de Confidentialité</a>
+                        <a href="#">Conditions d'Utilisation</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animation de fade-in
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                for (let i = 0; i < fadeElements.length; i++) {
+                    const elem = fadeElements[i];
+                    const distInView = elem.getBoundingClientRect().top - window.innerHeight + 100;
+                    
+                    if (distInView < 0) {
+                        elem.classList.add('visible');
+                    }
+                }
+            };
+            
+            fadeInOnScroll();
+            window.addEventListener('scroll', fadeInOnScroll);
+
+            // Mise à jour du label du fichier
+            const fileInput = document.getElementById('bugScreenshot');
+            const fileLabel = document.querySelector('.file-upload-label');
+            fileInput.addEventListener('change', function(e) {
+                const fileName = e.target.files[0]?.name || 'Choisir une image';
+                fileLabel.querySelector('.upload-text').textContent = fileName;
+            });
+        });
+    </script>
+</body>
+</html> 
