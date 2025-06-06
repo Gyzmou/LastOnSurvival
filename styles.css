@@ -820,9 +820,10 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--card-shadow);
     display: flex;
-    height: 210px;
+    min-height: 210px;
     margin: 15px 0;
     position: relative;
+    align-items: center;
 }
 
 .team-card::before {
