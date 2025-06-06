@@ -70,3 +70,22 @@ function toggleDropdown(id) {
         toggleButton.classList.add('open'); // Tourne la flèche
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const fadeInOnScroll = function() {
+        for (let i = 0; i < fadeElements.length; i++) {
+            const elem = fadeElements[i];
+            const distInView = elem.getBoundingClientRect().top - window.innerHeight + 100;
+            
+            if (distInView < 0) {
+                elem.classList.add('visible');
+            }
+        }
+    };
+    
+    fadeInOnScroll();
+    
+    window.addEventListener('scroll', fadeInOnScroll);
+});
