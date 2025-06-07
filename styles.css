@@ -453,7 +453,7 @@ a {
     left: 0;
     right: 0;
     padding: 2rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
     transform: translateY(20px);
     transition: all 0.5s ease;
     z-index: 2;
@@ -802,7 +802,7 @@ a {
 /* Section Équipe */
 .team {
     padding: 100px 0;
-    background-color: #36393f; /* Couleur de fond Discord */
+    background-color: #36393f; 
 }
 
 .team-grid {
@@ -938,7 +938,6 @@ a {
     border-color: var(--primary-light);
 }
 
-/* Mise à jour des couleurs de texte pour la section */
 .team .section-title {
     color: #ffffff;
 }
@@ -1065,7 +1064,6 @@ a {
     line-height: 1.6;
 }
 
-/* Animation pour les éléments fade-in */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -1186,7 +1184,6 @@ a {
     flex: 1;
 }
 
-/* Styles responsifs */
 @media (max-width: 768px) {
     .player-info-grid {
         grid-template-columns: 1fr;
@@ -1194,5 +1191,82 @@ a {
 
     .form-actions {
         flex-direction: column;
+    }
+}
+
+.about {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(255,255,255,0.05)"/></svg>');
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.about .container {
+    position: relative;
+    z-index: 2;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 50px auto 0;
+}
+
+.story-block {
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 4px solid var(--primary-color);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 0 10px 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-block:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.story-block h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.story-block p {
+    color: var(--text-primary);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 60px 0;
+    }
+    
+    .story-block {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .story-block h3 {
+        font-size: 1.3rem;
+    }
+    
+    .story-block p {
+        font-size: 1rem;
     }
 }
